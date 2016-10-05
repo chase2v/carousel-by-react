@@ -1,0 +1,44 @@
+/* 轮播图的外框 */
+.carousel {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+
+/* 轮播图的内框 */
+.carousel-child {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.carousel-child img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.carousel-appear {
+	opacity: 0.01;
+}
+.carousel-appear.carousel-appear-active {
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}
+.carousel-enter {
+	left: 100%;
+	opacity: 0.3;
+}
+.carousel-enter.carousel-enter-active {
+	left: 0;
+	opacity: 1;
+	transition: all 1.5s ease-in-out;
+}
+.carousel-leave {
+	left: 0;
+	opacity: 1;
+}
+.carousel-leave.carousel-leave-active {
+	left: -100%;
+	opacity: 0.3;
+	transition: all 1.5s ease-in-out;
+}
