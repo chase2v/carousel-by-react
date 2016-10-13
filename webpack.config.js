@@ -2,8 +2,8 @@ module.exports = {
 	module: {
 		loaders: [
 			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-			{ test: /\.css$/, loader: 'style!css' },
-			{ test: /\.png$/, loader: 'file' }
+			{ test: /\.(scss|css)$/, loader: 'style!css!sass' },
+			{ test: /\.(png|eot|svg|ttf|woff)$/, loader: 'file' }
 		]
 	},
 	entry: './index.js',

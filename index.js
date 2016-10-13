@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Carousel from './carousel';
+import Carousel from './component/carousel';
 
-import './index.css';
+import './style/index.scss';
 
 ReactDOM.render(
 	<Carousel/>,

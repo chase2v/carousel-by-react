@@ -1,0 +1,119 @@
+/* 轮播图的外框 */
+.carousel {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+
+	.btn {
+		position: absolute;
+		top: 190px;
+		z-index: 1;
+		cursor: pointer;
+
+		&.btn-right {
+			right: 0;
+		}
+	}
+
+	.circle-bar {
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.circle {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background-color: #ccc;
+			border-radius: 50%;
+			margin-right: 5px;
+			cursor: pointer;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.circle-active {
+				background-color: #000;
+			}
+		}
+	}
+}
+
+/* 轮播图的内框 */
+.carousel-child {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.carousel-child img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.carousel-appear {
+	opacity: 0.01;
+}
+.carousel-appear.carousel-appear-active {
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}
+.carousel-enter {
+	left: 100%;
+	opacity: 0.3;
+}
+.carousel-enter.carousel-enter-active {
+	left: 0;
+	opacity: 1;
+	transition: all 1.5s ease-in-out;
+}
+.carousel-enter-left {
+	left: -100%;
+	opacity: 0.3;
+}
+.carousel-enter-left.carousel-enter-left-active {
+	left: 0;
+	opacity: 1;
+	transition: all 1.5s ease-in-out;
+}
+.carousel-leave {
+	left: 0;
+	opacity: 1;
+}
+.carousel-leave.carousel-leave-active {
+	left: -100%;
+	opacity: 0.3;
+	transition: all 1.5s ease-in-out;
+}
+.carousel-leave-left {
+	left: 0;
+	opacity: 1;
+}
+.carousel-leave-left.carousel-leave-left-active {
+	left: 100%;
+	opacity: 0.3;
+	transition: all 1.5s ease-in-out;
+}
+
+
+/* 图标 */
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:20px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-chevronleft:before { content: "\e600"; }
+.icon-chevronright:before { content: "\e601"; }
